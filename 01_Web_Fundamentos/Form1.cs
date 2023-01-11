@@ -19,7 +19,7 @@ namespace _01_Web_Fundamentos
             //PROPIEDAD DE TIPO ENUMERADAS
             //UNA ENUMERACION SON UNA SERIE DE VALORES QUE SE REPRESENTAN DE FORMA GRAFICA Y AYUDAN AL PROGRAMADOR
             this.txtNombre.TextAlign = HorizontalAlignment.Center;
-            this.BackColor = Color.AliceBlue;
+            this.BackColor = Color.Aquamarine;
         }
 
     }
