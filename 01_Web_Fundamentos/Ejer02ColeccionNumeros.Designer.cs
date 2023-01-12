@@ -38,8 +38,9 @@
             this.inputImpares = new System.Windows.Forms.TextBox();
             this.inputPares = new System.Windows.Forms.TextBox();
             this.numRandoms = new System.Windows.Forms.ListBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnSeleccionados = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
+            this.inputSeleccionados = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // label1
@@ -129,31 +130,40 @@
             this.numRandoms.Size = new System.Drawing.Size(151, 254);
             this.numRandoms.TabIndex = 10;
             // 
-            // button1
+            // btnSeleccionados
             // 
-            this.button1.Location = new System.Drawing.Point(538, 40);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(203, 45);
-            this.button1.TabIndex = 11;
-            this.button1.Text = "Sumar seleccionados";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnSeleccionados.Location = new System.Drawing.Point(538, 40);
+            this.btnSeleccionados.Name = "btnSeleccionados";
+            this.btnSeleccionados.Size = new System.Drawing.Size(203, 45);
+            this.btnSeleccionados.TabIndex = 11;
+            this.btnSeleccionados.Text = "Sumar seleccionados";
+            this.btnSeleccionados.UseVisualStyleBackColor = true;
+            this.btnSeleccionados.Click += new System.EventHandler(this.btnSeleccionados_Click);
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(258, 248);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(63, 25);
+            this.label5.Size = new System.Drawing.Size(208, 25);
             this.label5.TabIndex = 12;
-            this.label5.Text = "label5";
+            this.label5.Text = "Suma de seleccionados";
+            // 
+            // inputSeleccionados
+            // 
+            this.inputSeleccionados.Location = new System.Drawing.Point(472, 248);
+            this.inputSeleccionados.Name = "inputSeleccionados";
+            this.inputSeleccionados.Size = new System.Drawing.Size(100, 32);
+            this.inputSeleccionados.TabIndex = 13;
             // 
             // Ejer02ColeccionNumeros
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1157, 603);
+            this.Controls.Add(this.inputSeleccionados);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnSeleccionados);
             this.Controls.Add(this.numRandoms);
             this.Controls.Add(this.inputPares);
             this.Controls.Add(this.inputImpares);
@@ -185,7 +195,8 @@
         private TextBox inputImpares;
         private TextBox inputPares;
         private ListBox numRandoms;
-        private Button button1;
+        private Button btnSeleccionados;
         private Label label5;
+        private TextBox inputSeleccionados;
     }
 }

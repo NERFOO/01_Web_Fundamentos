@@ -15,6 +15,7 @@ namespace _01_Web_Fundamentos
         public Ejer02ColeccionNumeros()
         {
             InitializeComponent();
+            this.numRandoms.SelectionMode = SelectionMode.MultiExtended;
         }
 
         private void btnGenerar_Click(object sender, EventArgs e)
@@ -42,6 +43,16 @@ namespace _01_Web_Fundamentos
                 }
                 suma += numeros;
                 this.inputSuma.Text = suma.ToString();
+            }
+        }
+
+        private void btnSeleccionados_Click(object sender, EventArgs e)
+        {
+            int sumaSeleccionados = 0;
+            foreach (int seleccionados in this.numRandoms.SelectedItems)
+            {
+                sumaSeleccionados += seleccionados;
+                this.inputSeleccionados.Text = sumaSeleccionados.ToString();
             }
         }
     }
