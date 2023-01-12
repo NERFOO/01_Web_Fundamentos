@@ -56,10 +56,11 @@
             this.listBox.Items.AddRange(new object[] {
             "Lista de elemento"});
             this.listBox.Location = new System.Drawing.Point(74, 85);
-            this.listBox.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.listBox.Margin = new System.Windows.Forms.Padding(5);
             this.listBox.Name = "listBox";
             this.listBox.Size = new System.Drawing.Size(238, 254);
             this.listBox.TabIndex = 1;
+            this.listBox.SelectedIndexChanged += new System.EventHandler(this.listBox_SelectedIndexChanged);
             // 
             // label2
             // 
@@ -74,7 +75,7 @@
             // inputNewElemento
             // 
             this.inputNewElemento.Location = new System.Drawing.Point(354, 85);
-            this.inputNewElemento.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.inputNewElemento.Margin = new System.Windows.Forms.Padding(5);
             this.inputNewElemento.Name = "inputNewElemento";
             this.inputNewElemento.Size = new System.Drawing.Size(304, 32);
             this.inputNewElemento.TabIndex = 3;
@@ -87,6 +88,7 @@
             this.btnInsertar.TabIndex = 4;
             this.btnInsertar.Text = "Insertar";
             this.btnInsertar.UseVisualStyleBackColor = true;
+            this.btnInsertar.Click += new System.EventHandler(this.btnInsertar_Click);
             // 
             // btnBorrarTodo
             // 
@@ -96,6 +98,7 @@
             this.btnBorrarTodo.TabIndex = 5;
             this.btnBorrarTodo.Text = "Borrar todo";
             this.btnBorrarTodo.UseVisualStyleBackColor = true;
+            this.btnBorrarTodo.Click += new System.EventHandler(this.btnBorrarTodo_Click);
             // 
             // btnEliminar
             // 
@@ -105,6 +108,7 @@
             this.btnEliminar.TabIndex = 7;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // lblIndice
             // 
@@ -139,7 +143,7 @@
             this.Controls.Add(this.listBox);
             this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "Form08ColeccionGrafica";
             this.Text = "Form08ColeccionGrafica";
             this.ResumeLayout(false);

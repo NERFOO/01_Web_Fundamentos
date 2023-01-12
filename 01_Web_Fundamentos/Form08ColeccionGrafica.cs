@@ -16,5 +16,34 @@ namespace _01_Web_Fundamentos
         {
             InitializeComponent();
         }
+
+        private void btnInsertar_Click(object sender, EventArgs e)
+        {
+            string elemento = this.inputNewElemento.Text;
+            this.listBox.Items.Add(elemento);
+        }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            //NECESITAMOS RECUPERAR EL OBJETO SELECCIONADO DEL CONTROL LISTBOX
+            //string seleccionado = this.listBox.SelectedItem.ToString();
+            //this.listBox.Items.Remove(seleccionado);
+            int indice = this.listBox.SelectedIndex;
+            this.listBox.Items.RemoveAt(indice);
+        }
+
+        private void btnBorrarTodo_Click(object sender, EventArgs e)
+        {
+            this.listBox.Items.Clear();
+        }
+
+        private void listBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if(this.listBox.SelectedIndex != -1)
+            {
+                this.lblIndice.Text = this.listBox.SelectedIndex.ToString();
+                this.lblItem.Text = this.listBox.SelectedItem.ToString();
+            }
+        }
     }
 }

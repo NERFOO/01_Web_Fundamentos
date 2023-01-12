@@ -11,7 +11,7 @@ namespace _01_Web_Fundamentos
             // To customize application configuration such as set high DPI settings or default font,
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
-            Application.Run(new Form08ColeccionGrafica());
+            Application.Run(new Ejer02ColeccionNumeros());
         }
     }
 }
