@@ -20,6 +20,10 @@ namespace _01_Web_Fundamentos
 
         private void btnInsertar_Click(object sender, EventArgs e)
         {
+            this.InsertarProducto();
+        }
+        void InsertarProducto()
+        {
             this.listTienda.Items.Add(this.inputProducto.Text);
         }
 
@@ -39,6 +43,14 @@ namespace _01_Web_Fundamentos
         private void btnModificar_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void inputProducto_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Enter)
+            {
+                this.listTienda.Items.Add(this.inputProducto.Text);
+            }
         }
     }
 }

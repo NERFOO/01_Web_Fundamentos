@@ -59,6 +59,7 @@
             this.inputProducto.Name = "inputProducto";
             this.inputProducto.Size = new System.Drawing.Size(175, 32);
             this.inputProducto.TabIndex = 1;
+            this.inputProducto.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.inputProducto_KeyPress);
             // 
             // btnInsertar
             // 

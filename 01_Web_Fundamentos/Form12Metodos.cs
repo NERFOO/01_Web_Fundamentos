@@ -64,5 +64,35 @@ namespace _01_Web_Fundamentos
             //CAMBIAMOS ALGO DEL OBJETO
             boton.BackColor= Color.Aquamarine;
         }
+
+        private void lblMause_MouseMove(object sender, MouseEventArgs e)
+        {
+            this.lblMause.Text = "X: " + e.X + ", Y: " + e.Y;
+        }
+
+        private void inputNumeros_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            //LA TECLA PULSADA --> e.KeyChar
+            //DESACTIVA LAS ACCIONES POSTERIORES AL EVENTO --> e.Handled = true;
+            //DEBEMOS INDICAR QUE SI ES LA TECLA DE BORRAR ESTE HABILITADO EL EVENTO
+            //char teclaBorrar = (char)8;
+            //EXISTE UNA ENUMERACION QUE NOS DEVUELVE EL CODIGO DE CADA TECLA
+            char teclaBorrar = (char) Keys.Back;
+
+            if (char.IsDigit(e.KeyChar) == false && e.KeyChar != teclaBorrar)
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void inputLetras_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            char teclaBorrar = (char)Keys.Back;
+
+            if (char.IsLetter(e.KeyChar) == false && e.KeyChar != teclaBorrar)
+            {
+                e.Handled = true;
+            }
+        }
     }
 }
