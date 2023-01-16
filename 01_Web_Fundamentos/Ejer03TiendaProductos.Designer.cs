@@ -99,6 +99,7 @@
             this.btnClear.TabIndex = 5;
             this.btnClear.Text = "Limpiar lista";
             this.btnClear.UseVisualStyleBackColor = true;
+            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
             // 
             // btnSeleccionar
             // 
@@ -108,6 +109,7 @@
             this.btnSeleccionar.TabIndex = 6;
             this.btnSeleccionar.Text = "Seleccion -->";
             this.btnSeleccionar.UseVisualStyleBackColor = true;
+            this.btnSeleccionar.Click += new System.EventHandler(this.btnSeleccionar_Click);
             // 
             // label2
             // 
@@ -135,6 +137,7 @@
             this.btnTodos.TabIndex = 9;
             this.btnTodos.Text = "Todos -->";
             this.btnTodos.UseVisualStyleBackColor = true;
+            this.btnTodos.Click += new System.EventHandler(this.btnTodos_Click);
             // 
             // listAlmacen
             // 
@@ -144,6 +147,7 @@
             this.listAlmacen.Name = "listAlmacen";
             this.listAlmacen.Size = new System.Drawing.Size(145, 254);
             this.listAlmacen.TabIndex = 11;
+            this.listAlmacen.SelectedIndexChanged += new System.EventHandler(this.listAlmacen_SelectedIndexChanged);
             // 
             // label3
             // 
@@ -162,6 +166,7 @@
             this.btnBajar.TabIndex = 13;
             this.btnBajar.Text = "Bajar";
             this.btnBajar.UseVisualStyleBackColor = true;
+            this.btnBajar.Click += new System.EventHandler(this.btnBajar_Click);
             // 
             // btnSubir
             // 
@@ -171,6 +176,7 @@
             this.btnSubir.TabIndex = 12;
             this.btnSubir.Text = "Subir";
             this.btnSubir.UseVisualStyleBackColor = true;
+            this.btnSubir.Click += new System.EventHandler(this.btnSubir_Click);
             // 
             // Ejer03TiendaProductos
             // 
