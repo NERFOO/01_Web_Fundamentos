@@ -17,4 +17,8 @@
     <NoWarn>1701;1702;CS8600;CS8604</NoWarn>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\02_Clases\02_Clases.csproj" />
+  </ItemGroup>
+
 </Project>
