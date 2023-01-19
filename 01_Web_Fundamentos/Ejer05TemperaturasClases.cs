@@ -1,4 +1,5 @@
-﻿using System;
+﻿using _02_Clases;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,8 +16,13 @@ namespace _01_Web_Fundamentos
         public Ejer05TemperaturasClases()
         {
             InitializeComponent();
+            this.btnMeses.Click += BtnMeses_Click;
         }
 
-
+        private void BtnMeses_Click(object? sender, EventArgs e)
+        {
+            this.listBox.Items.Clear();
+            this.listBox.Items.Add();Temperaturas.GetMeses()
+        }
     }
 }

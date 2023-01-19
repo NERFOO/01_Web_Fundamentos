@@ -10,20 +10,28 @@ namespace _02_Clases
 
     public class Temperaturas
     {
-        private string _Meses;
+        private List<string> _Meses;
         private int _Maxima;
         private int _Minima;
 
-        public string Meses
+        public List<string> Meses()
         {
-            get
+            return GetMeses();
+        }
+
+
+        public List<string> GetMeses()
+        {
+            List<string> months = new List<string> { };
+            DateTime fecha = DateTime.Parse("01/01/2023");
+
+            for(int i = 0; i < 12; i++)
             {
-                return this._Meses;
+                string mesNombre = fecha.ToString("MMMM");
+                fecha.AddMonths(1);
+                months.Add(mesNombre);
             }
-            set
-            {
-                this._Meses = value;
-            }
+            return months;
         }
 
 
