@@ -41,6 +41,25 @@ namespace _01_Web_Fundamentos
             this.inputMedia.Text = Math.Truncate(this.temperaturas.Average()).ToString();
             this.inputMedia.ForeColor = System.Drawing.Color.Blue;
             this.inputMedia.TextAlign = HorizontalAlignment.Center;
+
+
+            //int maxima = 0;
+            //int minima = 0;
+            //int media = 0;
+            //int suma = 0;
+            //foreach (int temp in this.temperaturas)
+            //{
+            //    maxima = Math.Max(maxima, temp);
+            //    minima = Math.Min(minima, temp);
+            //    suma += temp;
+            //}
+            //media = suma / this.temperaturas.Count;
+            //this.txtTemperaturaMaxima.Text = maxima.ToString();
+            //this.txtTemperaturaMinima.Text = minima.ToString();
+            //this.txtTemperaturaMedia.Text = media.ToString();
+
+
+
         }
 
         private void BtnMeses_Click(object? sender, EventArgs e)
@@ -64,6 +83,21 @@ namespace _01_Web_Fundamentos
                 this.temperaturas.Add(aleat.Next(-15, 40));
                 this.listBox.Items.Add(meses[i] + ": " + temperaturas[i]);
             }
+
+
+            //this.temperaturas.Clear();
+            //this.lstMeses.Items.Clear();
+            //Random random = new Random();
+            //DateTime fecha = DateTime.Parse("01/01/2023");
+            //for (int i = 1; i <= 12; i++)
+            //{
+            //    int temp = random.Next(-20, 40);
+            //    this.temperaturas.Add(temp);
+            //    string nombreMes = fecha.ToString("MMMM");
+            //    fecha = fecha.AddMonths(1);
+            //    this.lstMeses.Items.Add(nombreMes + ": " + temp);
+            //}
+
         }
     }
 }
