@@ -46,5 +46,25 @@ namespace _01_Web_Fundamentos
             this.listBox.Items.Add("Domicilio: " + persona.Domicilio.Calle);
             this.listBox.Items.Add("Domicilio Vacaciones: " + persona.DomicilioVacaciones.Calle);
         }
+
+        private void btnEmpleado_Click(object sender, EventArgs e)
+        {
+            Empleado empleado = new Empleado();
+            empleado.Nombre = "Jaime";
+            empleado.Apellidos = "Calderon Acero";
+            //AHORA EL EMPLEADO ES UN LISTO
+            this.listBox.Items.Add(empleado.GetNombreCompleto() + ", Salario: " + empleado.GetSalarioMinimo());
+            this.listBox.Items.Add(empleado.GetNombreCompleto() + ", Vacaciones: " + empleado.GetDiasVacaciones());
+
+            Director director = new Director();
+            director.Nombre = "lola";
+            director.Apellidos = "Flores";
+
+            this.listBox.Items.Add(director.GetNombreCompleto() + ", Salario: " + director.GetSalarioMinimo());
+            this.listBox.Items.Add(director.GetNombreCompleto() + ", Vacaciones: " + director.GetDiasVacaciones());
+
+            this.listBox.Items.Add(director);
+
+        }
     }
 }

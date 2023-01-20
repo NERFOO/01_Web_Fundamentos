@@ -31,6 +31,7 @@
             this.listBox = new System.Windows.Forms.ListBox();
             this.label1 = new System.Windows.Forms.Label();
             this.btnPersona = new System.Windows.Forms.Button();
+            this.btnEmpleado = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // listBox
@@ -53,7 +54,7 @@
             // 
             // btnPersona
             // 
-            this.btnPersona.Location = new System.Drawing.Point(264, 314);
+            this.btnPersona.Location = new System.Drawing.Point(66, 302);
             this.btnPersona.Name = "btnPersona";
             this.btnPersona.Size = new System.Drawing.Size(292, 113);
             this.btnPersona.TabIndex = 2;
@@ -61,11 +62,22 @@
             this.btnPersona.UseVisualStyleBackColor = true;
             this.btnPersona.Click += new System.EventHandler(this.btnPersona_Click);
             // 
+            // btnEmpleado
+            // 
+            this.btnEmpleado.Location = new System.Drawing.Point(377, 302);
+            this.btnEmpleado.Name = "btnEmpleado";
+            this.btnEmpleado.Size = new System.Drawing.Size(138, 113);
+            this.btnEmpleado.TabIndex = 3;
+            this.btnEmpleado.Text = "Crear empleado";
+            this.btnEmpleado.UseVisualStyleBackColor = true;
+            this.btnEmpleado.Click += new System.EventHandler(this.btnEmpleado_Click);
+            // 
             // Form18PruebaClases
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnEmpleado);
             this.Controls.Add(this.btnPersona);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.listBox);
@@ -81,5 +93,6 @@
         private ListBox listBox;
         private Label label1;
         private Button btnPersona;
+        private Button btnEmpleado;
     }
 }

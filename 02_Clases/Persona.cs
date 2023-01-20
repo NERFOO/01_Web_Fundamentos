@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -18,6 +19,7 @@ namespace _02_Clases
 
         public Persona() {
             this.DomicilioVacaciones = new Direccion("AA", "AAA", 1111);
+            Debug.WriteLine("Constructor PERSONA vacio");
         }
 
         #region PROPIEDADES
@@ -93,6 +95,13 @@ namespace _02_Clases
         public void MetodoParametrosOpcionales(int numero1, int numero2 = 1212)
         {
 
+        }
+
+        public Persona(string nombre, string apellidos)
+        {
+            Debug.WriteLine("Constructor PERSONA dos parametros");
+            this.Nombre = nombre;
+            this.Apellidos = apellidos;
         }
         #endregion
     }
