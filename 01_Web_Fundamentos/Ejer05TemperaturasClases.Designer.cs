@@ -48,6 +48,7 @@
             this.listBox.Name = "listBox";
             this.listBox.Size = new System.Drawing.Size(200, 319);
             this.listBox.TabIndex = 20;
+            this.listBox.SelectedIndexChanged += new System.EventHandler(this.listBox_SelectedIndexChanged);
             // 
             // inputMedia
             // 
@@ -114,6 +115,7 @@
             this.btnMeses.TabIndex = 12;
             this.btnMeses.Text = "Generar meses";
             this.btnMeses.UseVisualStyleBackColor = true;
+            this.btnMeses.Click += new System.EventHandler(this.btnMeses_Click_1);
             // 
             // label1
             // 

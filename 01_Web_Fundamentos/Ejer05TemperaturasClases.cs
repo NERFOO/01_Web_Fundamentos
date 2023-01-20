@@ -13,16 +13,44 @@ namespace _01_Web_Fundamentos
 {
     public partial class Ejer05TemperaturasClases : Form
     {
+        List<Mes> meses;
+
         public Ejer05TemperaturasClases()
         {
             InitializeComponent();
-            this.btnMeses.Click += BtnMeses_Click;
+            this.meses = new List<Mes>();
         }
 
-        private void BtnMeses_Click(object? sender, EventArgs e)
+        private void btnMeses_Click_1(object sender, EventArgs e)
         {
             this.listBox.Items.Clear();
-            this.listBox.Items.Add();Temperaturas.GetMeses()
+            this.meses.Clear();
+            Random random = new Random();
+            DateTime tiempo = DateTime.Parse("01/01/2023");
+            for (int i = 1; i <= 12; i++)
+            {
+                Mes mes = new Mes();
+                string nombremes = tiempo.ToString("MMMM").ToUpper();
+                mes.NombreMes = nombremes;
+                mes.TemperaturaMaxima = random.Next(10, 50);
+                mes.TemperaturaMinima = random.Next(-10, 9);
+                this.meses.Add(mes);
+                this.listBox.Items.Add(nombremes);
+                tiempo = tiempo.AddMonths(1);
+            }
+        }
+
+        private void listBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (this.listBox.SelectedIndex != -1)
+            {
+                int indice = this.listBox.SelectedIndex;
+                Mes mes = this.meses[indice];
+                this.inputMax.Text = mes.TemperaturaMaxima.ToString();
+                this.inputMin.Text = mes.TemperaturaMinima.ToString();
+                this.inputMedia.Text = mes.GetTemperaturaMedia().ToString();
+            }
         }
     }
+
 }
