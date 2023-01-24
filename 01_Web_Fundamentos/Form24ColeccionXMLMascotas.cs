@@ -34,6 +34,16 @@ namespace _01_Web_Fundamentos
             mascota.Nombre = this.txtNombre.Text;
             mascota.Raza = this.txtRaza.Text;
             mascota.Years = int.Parse(this.txtEdad.Text);
+
+            //CONVERT FILE TO BYTE[]
+            //mascota.Imagen = Image.FromFile("C:\Users\Alumnos MCSD Mañana\Desktop\FULLSTACK\React\reactservicios\src\components\assets\images\img1.jpg");
+            byte[] imageBytes = File.ReadAllBytes(@"C:\Users\Alumnos MCSD Mañana\Desktop\FULLSTACK\React\reactservicios\src\components\assets\images\img1.jpg");
+            mascota.Imagen = imageBytes;
+            //PARA PINTAR NECESITAMOS LA CLASE IMAGE: IMAGE.FROMSTREAM(STREAM)
+            //this.image.Image = mascota.Imagen.ToString();
+            string cadena = Encoding.UTF8.GetString(mascota.Imagen);
+            this.image.Image = cadena;
+
             this.coleccionMascotas.Add(mascota);
             this.txtNombre.Text = "";
             this.txtRaza.Text = "";

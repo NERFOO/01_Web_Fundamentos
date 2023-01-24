@@ -39,6 +39,9 @@
             this.btnNuevaMascota = new System.Windows.Forms.Button();
             this.lstMascotas = new System.Windows.Forms.ListBox();
             this.label4 = new System.Windows.Forms.Label();
+            this.image = new System.Windows.Forms.PictureBox();
+            this.btnExaminar = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.image)).BeginInit();
             this.SuspendLayout();
             // 
             // txtEdad
@@ -146,11 +149,31 @@
             this.label4.TabIndex = 21;
             this.label4.Text = "Mascotas";
             // 
+            // image
+            // 
+            this.image.Location = new System.Drawing.Point(255, 243);
+            this.image.Name = "image";
+            this.image.Size = new System.Drawing.Size(137, 107);
+            this.image.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.image.TabIndex = 23;
+            this.image.TabStop = false;
+            // 
+            // btnExaminar
+            // 
+            this.btnExaminar.Location = new System.Drawing.Point(255, 370);
+            this.btnExaminar.Name = "btnExaminar";
+            this.btnExaminar.Size = new System.Drawing.Size(137, 29);
+            this.btnExaminar.TabIndex = 24;
+            this.btnExaminar.Text = "Examinar";
+            this.btnExaminar.UseVisualStyleBackColor = true;
+            // 
             // Form24ColeccionXMLMascotas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnExaminar);
+            this.Controls.Add(this.image);
             this.Controls.Add(this.lstMascotas);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.btnNuevaMascota);
@@ -164,6 +187,7 @@
             this.Controls.Add(this.label1);
             this.Name = "Form24ColeccionXMLMascotas";
             this.Text = "Form24ColeccionXMLMascotas";
+            ((System.ComponentModel.ISupportInitialize)(this.image)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -182,5 +206,7 @@
         private Button btnNuevaMascota;
         private ListBox lstMascotas;
         private Label label4;
+        private PictureBox image;
+        private Button btnExaminar;
     }
 }
