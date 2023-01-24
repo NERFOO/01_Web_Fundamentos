@@ -12,6 +12,7 @@ using System.Windows.Forms;
 using System.Xml.Serialization;
 using System.IO;
 using _02_Clases.Models;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace _01_Web_Fundamentos
 {
@@ -42,7 +43,7 @@ namespace _01_Web_Fundamentos
             //PARA PINTAR NECESITAMOS LA CLASE IMAGE: IMAGE.FROMSTREAM(STREAM)
             //this.image.Image = mascota.Imagen.ToString();
             string cadena = Encoding.UTF8.GetString(mascota.Imagen);
-            this.image.Image = cadena;
+            this.image.Image = mascota.Imagen;
 
             this.coleccionMascotas.Add(mascota);
             this.txtNombre.Text = "";
