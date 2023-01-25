@@ -43,7 +43,7 @@ namespace _01_Web_Fundamentos
             //PARA PINTAR NECESITAMOS LA CLASE IMAGE: IMAGE.FROMSTREAM(STREAM)
             //this.image.Image = mascota.Imagen.ToString();
             string cadena = Encoding.UTF8.GetString(mascota.Imagen);
-            this.image.Image = mascota.Imagen;
+            //this.image.Image = mascota.Imagen;
 
             this.coleccionMascotas.Add(mascota);
             this.txtNombre.Text = "";
