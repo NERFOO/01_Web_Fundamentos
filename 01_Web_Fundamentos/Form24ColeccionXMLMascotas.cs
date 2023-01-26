@@ -37,13 +37,16 @@ namespace _01_Web_Fundamentos
             mascota.Years = int.Parse(this.txtEdad.Text);
 
             //CONVERT FILE TO BYTE[]
-            //mascota.Imagen = Image.FromFile("C:\Users\Alumnos MCSD Mañana\Desktop\FULLSTACK\React\reactservicios\src\components\assets\images\img1.jpg");
-            byte[] imageBytes = File.ReadAllBytes(@"C:\Users\Alumnos MCSD Mañana\Desktop\FULLSTACK\React\reactservicios\src\components\assets\images\img1.jpg");
-            mascota.Imagen = imageBytes;
+            //mascota.Imagen = Image.FromFile(@"C:\Users\User\Desktop\Certificados y documentos de interes\logo NERFO\logoFondoNegro.png");
+            //byte[] imageBytes = File.ReadAllBytes(@"C:\Users\User\Desktop\Certificados y documentos de interes\logo NERFO\logoFondoNegro.png");
+            //mascota.Imagen = imageBytes;
             //PARA PINTAR NECESITAMOS LA CLASE IMAGE: IMAGE.FROMSTREAM(STREAM)
             //this.image.Image = mascota.Imagen.ToString();
-            string cadena = Encoding.UTF8.GetString(mascota.Imagen);
-            //this.image.Image = mascota.Imagen;
+            //string cadena = Encoding.UTF8.GetString(mascota.Imagen);
+            //this.image.Image = cadena;
+
+            //MemoryStream ms = new MemoryStream();
+            //this.image.Image = System.Drawing.Image.FromStream(imageBytes);
 
             this.coleccionMascotas.Add(mascota);
             this.txtNombre.Text = "";
@@ -94,6 +97,11 @@ namespace _01_Web_Fundamentos
                 this.txtRaza.Text = mascota.Raza;
                 this.txtEdad.Text = mascota.Years.ToString();
             }
+        }
+
+        private void btnExaminar_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

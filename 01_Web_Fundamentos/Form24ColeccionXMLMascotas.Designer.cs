@@ -166,6 +166,7 @@
             this.btnExaminar.TabIndex = 24;
             this.btnExaminar.Text = "Examinar";
             this.btnExaminar.UseVisualStyleBackColor = true;
+            this.btnExaminar.Click += new System.EventHandler(this.btnExaminar_Click);
             // 
             // Form24ColeccionXMLMascotas
             // 
