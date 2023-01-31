@@ -12,7 +12,7 @@ using System.Windows.Forms;
 using System.Xml.Serialization;
 using System.IO;
 using _02_Clases.Models;
-using static System.Net.Mime.MediaTypeNames;
+using _02_Clases.Helpers;
 
 namespace _01_Web_Fundamentos
 {
@@ -20,7 +20,8 @@ namespace _01_Web_Fundamentos
     {
 
         XmlSerializer serializer;
-        List<Mascota> coleccionMascotas; 
+        List<Mascota> coleccionMascotas;
+        string path;
 
         public Form24ColeccionXMLMascotas()
         {
@@ -47,6 +48,13 @@ namespace _01_Web_Fundamentos
 
             //MemoryStream ms = new MemoryStream();
             //this.image.Image = System.Drawing.Image.FromStream(imageBytes);
+
+            // CONVERT FILE TO BYTE []
+            mascota.Imagen = HelperFiles.ConvertFileToByteArray(this.path);
+
+            // PARA PINTAR NECESITAMOS LA CLASE IMAGE: Image.FromStream(stream);
+            Stream stream = new MemoryStream(mascota.Imagen);
+            this.image.Image = Image.FromStream(stream);
 
             this.coleccionMascotas.Add(mascota);
             this.txtNombre.Text = "";
@@ -101,7 +109,11 @@ namespace _01_Web_Fundamentos
 
         private void btnExaminar_Click(object sender, EventArgs e)
         {
-
+            OpenFileDialog ofd = new OpenFileDialog();
+            if (ofd.ShowDialog() == DialogResult.OK)
+            {
+                this.path = ofd.FileName;
+            }
         }
     }
 }

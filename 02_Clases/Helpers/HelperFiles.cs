@@ -47,6 +47,12 @@ namespace _02_Clases.Helpers
                 writer.Close();
             }
         }
+
+        public static byte[] ConvertFileToByteArray(string path)
+        {
+            byte[] bytes = File.ReadAllBytes(path);
+            return bytes;
+        }
     }
 
 }
