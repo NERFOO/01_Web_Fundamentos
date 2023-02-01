@@ -49,12 +49,16 @@ namespace _01_Web_Fundamentos
             //MemoryStream ms = new MemoryStream();
             //this.image.Image = System.Drawing.Image.FromStream(imageBytes);
 
-            // CONVERT FILE TO BYTE []
-            mascota.Imagen = HelperFiles.ConvertFileToByteArray(this.path);
 
-            // PARA PINTAR NECESITAMOS LA CLASE IMAGE: Image.FromStream(stream);
-            Stream stream = new MemoryStream(mascota.Imagen);
-            this.image.Image = Image.FromStream(stream);
+
+            //// CONVERT FILE TO BYTE []
+            //mascota.Imagen = HelperFiles.ConvertFileToByteArray(this.path);
+
+            //// PARA PINTAR NECESITAMOS LA CLASE IMAGE: Image.FromStream(stream);
+            //Stream stream = new MemoryStream(mascota.Imagen);
+            //this.image.Image = Image.FromStream(stream);
+
+            image.ImageLocation = "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwalpaper.es%2Fwallpaper%2F2015%2F11%2Fwallpaper-gratis-de-un-espectacular-paisaje-en-color-azul-en-hd.jpg&f=1&nofb=1&ipt=0d098d2e6dee8172ec86fa2aadb59d67e67f3ec04eb327da0861312338ee9645&ipo=images";
 
             this.coleccionMascotas.Add(mascota);
             this.txtNombre.Text = "";
